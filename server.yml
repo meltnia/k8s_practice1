@@ -13,10 +13,10 @@ spec:
         name: server_test
     spec:
       containers:
-      - name: mh_flask
-        image: ghcr.io/meltnia/mh-flask:latest
+      - name: flask-server-k8s
+        image: ghcr.io/meltnia/flask-server-k8s:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 
 
 
