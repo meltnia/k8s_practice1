@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: server_test
+  template:
+    metadata:
+      labels:
+        name: server_test
+    spec:
+      containers:
+      - name: mh_flask
+        image: ghcr.io/meltnia/mh-flask:latest
+        ports:
+        - containerPort: 80
+
+
+
