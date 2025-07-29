@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server_test
+  name: server-test
 spec:
 #  replicas: 3
   selector:
     matchLabels:
-      name: server_test
+      name: server-test
   template:
     metadata:
       labels:
-        name: server_test
+        name: server-test
     spec:
       containers:
       - name: flask-server-k8s
