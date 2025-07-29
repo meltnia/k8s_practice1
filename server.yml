@@ -20,6 +20,10 @@ spec:
         volumeMounts:
         - mountPath: /flask_download
           name: server-mount
+      resources:
+        limits: 
+          cpu: "500m"
+          memory: "100Mi"
       volumes:
       - name: server-mount
         persistentVolumeClaim:
