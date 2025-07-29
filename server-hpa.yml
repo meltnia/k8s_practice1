@@ -7,7 +7,7 @@ spec:
   maxReplicas: 5
   scaleTargetRef:
     kind: Deployment
-    name: httpd-server
+    name: server_test
   metrics:
   - type: Resource
     resource:
