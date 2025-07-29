@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: persistentvolumes
+metadata:
+  name: server-pv
+spec:
+  capacity:
+    storage: 500Mi
+  nfs:
+    server: 192.168.56.11
+    path: /flask_download
+  accessModes: 
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
