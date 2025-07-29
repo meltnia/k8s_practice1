@@ -18,7 +18,7 @@ spec:
         ports:
         - containerPort: 5000
         volumeMounts:
-          mountPath: /flask_download
+        - mountPath: /flask_download
           name: server-mount
       volumes:
       - name: server-mount
