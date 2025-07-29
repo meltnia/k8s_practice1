@@ -1,0 +1,17 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: 
+  name: server-hpa
+spec: 
+  minReplicas: 2
+  maxReplicas: 5
+  scaleTargetRef:
+    kind: Deployment
+    name: httpd-server
+  metrics:
+  - resource:
+    name: cpu
+    type: Resource
+    target:
+      averageUtilization: 80
+      type: Utilization
