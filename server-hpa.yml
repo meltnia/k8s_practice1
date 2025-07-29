@@ -9,9 +9,9 @@ spec:
     kind: Deployment
     name: httpd-server
   metrics:
-  - resource:
-    name: cpu
-    type: Resource
-    target:
-      averageUtilization: 80
-      type: Utilization
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        averageUtilization: 80
+        type: Utilization
