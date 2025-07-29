@@ -1,9 +1,10 @@
 FROM python:3.11-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential nfs-common \
+    build-essential\
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /python
+RUN mkdir /flask_download
 
 RUN pip install --no-cache-dir Flask
 RUN pip install --no-cache-dir gunicorn
