@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
 spec:
   selector:
-    matchLabels
+    matchLabels:
       app.kubernetes.io/name: argocd-server
   endpoints:
     - port: metrics
