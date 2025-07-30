@@ -1,0 +1,12 @@
+apiVersion: 
+kind: PersistentVolume
+metadata: 
+  name: prome8g-pv
+spec: 
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/data/prometheus-8g
+  persistentVolumeReclaimPolicy: Retain

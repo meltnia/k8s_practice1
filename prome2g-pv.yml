@@ -1,0 +1,12 @@
+apiVersion: 
+kind: PersistentVolume
+metadata: 
+  name: prome2g-pv
+spec: 
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/data/prometheus-2g
+  persistentVolumeReclaimPolicy: Retain
