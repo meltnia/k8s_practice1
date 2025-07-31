@@ -1,0 +1,15 @@
+global:
+  kibanaEnabled: true
+master:
+  masterOnly: false # memory is not enough
+  replicaCount: 1
+
+data: # memory is not enough. so do the Count 0
+  replicaCount: 0
+coordinating:
+  replicaCount: 0
+ingest:
+  replicaCount: 0
+kibana:
+  service:
+    type: LoadBalancer

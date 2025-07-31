@@ -1,0 +1,18 @@
+config:
+  outputs: |
+    [OUTPUT]
+        Name es
+        Match *
+        Host elasticsearch.logging.svc.cluster.local
+        Port 9200
+        Retry_Limit false
+        Logstash_Format On
+        Logstash_Prefix fluent-bit
+        Trace_Error On
+        Replace_Dots On
+        Suppress_Type_Name On
+
+tolerations:
+- key: node-role.kubernetes.io/control-plane
+  operator: Exists
+  effect: NoSchedule
